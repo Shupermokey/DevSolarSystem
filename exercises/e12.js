@@ -7,17 +7,14 @@ import { data } from "../data/data";
 export function allPlanetsMoonsCount(data) {
   // Your code goes here...
 
-  return data.planets.reduce(function(acc, curr){
-    if(curr.moons){
+  return data.planets.reduce((acc, curr) => {
+    if (curr.moons) {
       return acc + curr.moons.length;
-    }
-    else{
+    } else {
       return acc + 0;
     }
-  }, 0)
+  }, 0);
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-12"

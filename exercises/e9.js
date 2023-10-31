@@ -6,12 +6,16 @@ import { data } from "../data/data";
 
 export function getEarthData(data) {
   // Your code goes here...
-  return data.planets.filter(function(planet){
-    return planet.name === 'Earth';
-  })[0];
+  // return data.planets.filter(function(planet){
+  //   return planet.name === 'Earth';
+  // })[0];
+
+  // return data.planets.filter((planet) => planet.name === 'Earth')[0];
+
+  return data.planets
+    // .filter((planet) => planet.name === "Earth")
+    .find((planet) => planet.name === "Earth");
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-9"
